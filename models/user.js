@@ -48,11 +48,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       role: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notNull: { msg: "Role is required" },
-          notEmpty: { msg: "ROle is required" },
-        },
+        defaultValue: "user",
       },
       phoneNumber: {
         type: DataTypes.STRING,

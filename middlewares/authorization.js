@@ -1,6 +1,6 @@
 const { Product } = require("../models");
 
-const ProductAuthorization = async (req, res, next) => {
+const productAuthorization = async (req, res, next) => {
   try {
     const { role, id } = req.user;
 
@@ -21,7 +21,7 @@ const ProductAuthorization = async (req, res, next) => {
   }
 };
 
-const suAuthorization = async (req, res, next) => {
+const userAuthorization = async (req, res, next) => {
   try {
     const { role } = req.user;
     if (role !== "admin") throw { name: "Unauthorized", status: 403 };
@@ -32,4 +32,4 @@ const suAuthorization = async (req, res, next) => {
   }
 };
 
-module.exports = { ProductAuthorization, suAuthorization };
+module.exports = { productAuthorization, userAuthorization };

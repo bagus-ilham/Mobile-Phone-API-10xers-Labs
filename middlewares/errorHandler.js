@@ -3,6 +3,10 @@ async function errorHandler(err, req, res, next) {
   switch (err) {
     case "Invalid token":
     case "Unauthorized":
+    case "Username, email, password or phone number required":
+    case "Email already registered":
+    case "Email or password required":
+    case "Invalid email or password":
       res.status(err.status).json({ message: err.name });
       break;
     case "JsonWebTokenError":
@@ -14,3 +18,5 @@ async function errorHandler(err, req, res, next) {
       break;
   }
 }
+
+module.exports = errorHandler;
