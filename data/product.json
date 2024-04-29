@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Samsung Galaxy Z Fold 4",
+      "description": "The Samsung Galaxy Z Fold 4 introduces a revolutionary foldable design, featuring a flexible display that unfolds to provide a tablet-like experience. It boasts a powerful Snapdragon 9 Gen 2 processor, a versatile camera system, and enhanced multitasking capabilities.",
+      "price": 1599,
+      "stock": 25,
+      "image": "samsung_galaxy_z_fold_4.jpg", 
+      "UserId": 1
+    },
+    {
+      "name": "Apple iPhone 15 Pro",
+      "description": "The Apple iPhone 15 Pro sets new standards for performance and innovation, powered by the groundbreaking A17 Bionic chip. It features a stunning ProMotion XDR display, a revolutionary camera system with LiDAR technology, and ultra-fast 5G connectivity.",
+      "price": 1299,
+      "stock": 30,
+      "image": "apple_iphone_15_pro.jpg", 
+      "UserId": 1
+    },
+    {
+      "name": "Google Pixel 7",
+      "description": "The Google Pixel 7 brings unparalleled AI capabilities and photography expertise, powered by the latest Google Tensor 2 chip. It features a refined design, a cutting-edge camera system with advanced computational photography, and seamless integration with Google services.",
+      "price": 599,
+      "stock": 80,
+      "image": "google_pixel_7.jpg", 
+      "UserId": 1
+    },
+    {
+      "name": "OnePlus 12 Pro",
+      "description": "The OnePlus 12 Pro raises the bar for flagship smartphones with its lightning-fast Warp Charge technology, a stunning 150Hz Fluid AMOLED display, and the latest Snapdragon 9 Gen 3 processor. It also offers a versatile camera system and OxygenOS for a smooth user experience.",
+      "price": 999,
+      "stock": 50,
+      "image": "oneplus_12_pro.jpg", 
+      "UserId": 1
+    },
+    {
+      "name": "Xiaomi 14",
+      "description": "The Xiaomi 14 combines premium design with cutting-edge technology, featuring a powerful camera system co-engineered with Hasselblad, a vibrant AMOLED display, and ultra-fast charging capabilities.",
+      "price": 899,
+      "stock": 45,
+      "image": "xiaomi_14.jpg", 
+      "UserId": 1
+    },
+    {
+      "name": "Motorola Edge 40",
+      "description": "The Motorola Edge 40 offers exceptional value with its sleek design, a versatile triple-camera system, and a long-lasting battery. It also features a smooth 120Hz display and 5G connectivity for fast and reliable performance.",
+      "price": 499,
+      "stock": 110,
+      "image": "motorola_edge_40.jpg", 
+      "UserId": 1
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+      "username": "pulu admin",
+      "email": "pulu@index.co",
+      "password": "pulupulu", 
+      "role": "admin",
+      "phoneNumber": "123-456-7890"
+    },
+    {
+      "username": "pulu client",
+      "email": "puluclient@index.com",
+      "password": "pulupulu", 
+      "role": "user",
+      "phoneNumber": "987-654-3210"
+    }
+]
