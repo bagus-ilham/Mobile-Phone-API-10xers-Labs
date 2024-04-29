@@ -7,6 +7,8 @@ async function errorHandler(err, req, res, next) {
     case "Email already registered":
     case "Email or password required":
     case "Invalid email or password":
+        case "Data not found":
+            case "All field canot be empty":
       res.status(err.status).json({ message: err.name });
       break;
     case "JsonWebTokenError":

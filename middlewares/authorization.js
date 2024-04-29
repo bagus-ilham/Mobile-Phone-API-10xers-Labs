@@ -21,15 +21,4 @@ const productAuthorization = async (req, res, next) => {
   }
 };
 
-const userAuthorization = async (req, res, next) => {
-  try {
-    const { role } = req.user;
-    if (role !== "admin") throw { name: "Unauthorized", status: 403 };
-
-    next();
-  } catch (error) {
-    next(error);
-  }
-};
-
-module.exports = { productAuthorization, userAuthorization };
+module.exports = productAuthorization;
