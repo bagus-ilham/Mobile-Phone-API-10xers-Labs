@@ -55,7 +55,7 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         validate: {
           notNull: { msg: "Phone Number is required" },
-          notEmpty: { msg: "Phone Number required" },
+          notEmpty: { msg: "Phone Number is required" },
         },
       },
     },

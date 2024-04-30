@@ -22,7 +22,7 @@ class userController {
         throw { name: "Email already registered", status: 400 };
       }
       const user = await User.create(req.body);
-      res.status(201).json(user);
+      res.status(201).json(`User ${email} created successfully`);
     } catch (error) {
       next(error);
     }
