@@ -10,15 +10,15 @@ const upload = multer({storage : multer.memoryStorage()})
 
 router.use(authentication)
 
-router.get("/product", productController.getAllProduct);
-router.get("/product/:id", productController.getProductById);
+router.get("/", productController.getAllProduct);
+router.get("/:id", productController.getProductById);
 
 router.use(productAuthorization)
 
-router.post("/product", productController.createProduct);
-router.put("/product:id", productController.updateProduct);
-router.delete("/product:id", productController.deleteProduct);
-router.patch("/product/:id", upload.single("file"), productController.uploadFile);
+router.post("/", productController.createProduct);
+router.put("/:id", productController.updateProduct);
+router.delete("/:id", productController.deleteProduct);
+router.patch("/:id", upload.single("file"), productController.uploadFile);
 
 
 module.exports = router;
