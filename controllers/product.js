@@ -1,4 +1,11 @@
 const { Product, User } = require("../models");
+const cloudinary = require('cloudinary').v2;
+
+cloudinary.config({ 
+  cloud_name: 'dcx3rnm9g', 
+  api_key: process.env.API_KEY, 
+  api_secret: process.env.API_SECRET
+});
 
 class productController {
   static async getAllProduct(req, res, next) {
@@ -109,6 +116,41 @@ class productController {
   }
   static async uploadFile(req, res, next) {
     try {
+      if (!req.file) throw { name: "file empty" };
+
+      const { id } = req.params;
+      const picture = req.file.buffer;
+
+      const picture2 = Buffer.from(picture).toString("base64");
+
+      const resultPicture = `data:${req.file.mimetype};base64,${picture2}`;
+
+      const upload = await cloudinary.uploader.upload(resultPicture, {
+        public_id: req.file.originalname,
+      });
+
+      const data = await Product.findByPk(id);
+
+      if (!data) {
+        throw { name: "error not found" };
+      }
+
+      await Product.update(
+        {
+          imgUrl: upload.secure_url,
+        },
+        {
+          where: {
+            id,
+          },
+        }
+      );
+
+      if (!picture) {
+        throw { name: "file empty" };
+      }
+
+      res.status(200).json({ message: `image ${data.name} success to update` });
     } catch (error) {
       next(error);
     }
